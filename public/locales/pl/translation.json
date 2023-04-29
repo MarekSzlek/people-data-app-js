@@ -1,0 +1,37 @@
+{
+  "actions": "Akcje",
+  "delete": "Usuń",
+  "edit": "Edytuj",
+  "page": "strona",
+
+  "en": "Angielski",
+  "pl": "Polski",
+  "English": "Angielski",
+  "Polish": "Polski",
+  "Language": "Język",
+
+  "menu.main": "Główna",
+  "menu.views": "Widoki",
+
+  "main.table.name": "Imię i nazwisko",
+  "main.table.age": "Wiek",
+  "main.table.birthdate": "Data urodzenia",
+  "main.table.resume": "Życiorys",
+
+  "main.form.title": "Wpisz dane:",
+
+  "Please enter your name": "Proszę podać imię i nazwisko",
+  "Please enter your age": "Proszę podać wiek",
+  "Please select a date": "Proszę wybrać datę",
+  "Max. 250 characters": "Maks. 250 znaków",
+
+  "Name": "Imię i nazwisko",
+  "Age": "Wiek",
+  "Birth date": "Data urodzenia",
+  "Resume": "Życiorys",
+  "Actions": "Akcje",
+  "Submit": "Prześlij",
+
+  "404.header": "Wygląda na to, że się zgubiłeś...",
+  "404.link": "Zabierz mnie do strony głównej!"
+}

@@ -1,0 +1,37 @@
+{
+  "actions": "Actions",
+  "delete": "Delete",
+  "edit": "Edit",
+  "page": "page",
+
+  "en": "English",
+  "pl": "Polish",
+  "English": "English",
+  "Polish": "Polish",
+  "Language": "Language",
+
+  "menu.main": "Main",
+  "menu.views": "Views",
+
+  "main.table.name": "Name",
+  "main.table.age": "Age",
+  "main.table.birthdate": "Birth date",
+  "main.table.resume": "Resume",
+
+  "main.form.title": "Input data:",
+  
+  "Please enter your name": "Please enter your name",
+  "Please enter your age": "Please enter your age",
+  "Please select a date": "Please select a date",
+  "Max. 250 characters": "Max. 250 characters",
+
+  "Name": "Name",
+  "Age": "Age",
+  "Birth date": "Birth date",
+  "Resume": "Resume",
+  "Actions": "Actions",
+  "Submit": "Submit",
+
+  "404.header": "Oops! You seem to be lost...",
+  "404.link": "Return to the main page!"
+}
