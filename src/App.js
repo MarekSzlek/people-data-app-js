@@ -8,6 +8,11 @@ import { useTranslation } from "react-i18next";
 import { ConfigProvider } from "antd";
 import { Provider } from "react-redux";
 import { store } from "./store";
+import plPL from "antd/locale/pl_PL";
+import enUS from "antd/locale/en_US";
+import dayjs from "dayjs";
+import "dayjs/locale/pl";
+import "dayjs/locale/en";
 
 import LocaleContext from "./LocaleContext";
 import MainPage from "./pages/mainPage";
@@ -16,24 +21,37 @@ import NotFoundPage from "./pages/NotFoundPage";
 
 const { Header } = Layout;
 
+dayjs.locale("pl");
+
 function App() {
-  const [locale, setLocale] = useState("pl");
-  i18n.on("languageChanged", (lng) => setLocale(i18n.language));
+  const { t } = useTranslation();
+  const navigate = useNavigate();
+
+  const [currentLocale, setCurrentLocale] = useState("pl");
+  i18n.on("languageChanged", (lng) => setCurrentLocale(i18n.language));
 
   function changeLocale(l) {
-    if (locale !== l) {
+    if (currentLocale !== l) {
       i18n.changeLanguage(l);
-      setLocale(l);
+      setCurrentLocale(l);
     }
   }
-  const { t } = useTranslation();
 
-  const navigate = useNavigate();
+  const getDatePickerLocale = (lng) => {
+    switch (lng) {
+      case "en":
+        return enUS;
+      case "pl":
+        return plPL;
+      default:
+        return enUS;
+    }
+  };
 
   return (
     <Provider store={store}>
-      <ConfigProvider locale={locale}>
-        <LocaleContext.Provider value={{ locale, setLocale }}>
+      <ConfigProvider locale={getDatePickerLocale(currentLocale)}>
+        <LocaleContext.Provider value={{ currentLocale, setCurrentLocale }}>
           <div>
             <Header>
               <Menu

@@ -3,15 +3,17 @@ import { peopleData } from "../rawData/peopleData";
 
 const peopleSlice = createSlice({
   name: "people",
-  initialState: {
-    data: peopleData,
-  },
+  initialState: { data: peopleData, selectedRecordId: "" },
   reducers: {
+    setSelectedRecordId(state, action) {
+      state.selectedRecordId = action.payload;
+    },
     editPerson(state, action) {
-      const editedPerson = action.payload;
-      return state.data.map((person) => {
-        console.log(person.id === action.payload.id);
-        return person.id === action.payload.id ? editedPerson : person;
+      state.data = state.data.map((person) => {
+        if (person.id === action.payload.id) {
+          return action.payload;
+        }
+        return person;
       });
     },
     removePerson(state, action) {
@@ -24,11 +26,11 @@ const peopleSlice = createSlice({
       const updated = state.data.filter((person) => {
         return !action.payload.includes(person.id);
       });
-      console.log(state.data);
       state.data = updated;
     },
   },
 });
 
-export const { removePerson, editPerson, removeMultiple } = peopleSlice.actions;
+export const { removePerson, editPerson, removeMultiple, setSelectedRecordId } =
+  peopleSlice.actions;
 export const peopleReducer = peopleSlice.reducer;

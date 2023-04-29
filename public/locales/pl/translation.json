@@ -18,12 +18,14 @@
   "main.table.birthdate": "Data urodzenia",
   "main.table.resume": "Życiorys",
 
-  "main.form.title": "Wpisz dane:",
+  "main.form.title": "Edytuj dane:",
 
-  "Please enter your name": "Proszę podać imię i nazwisko",
-  "Please enter your age": "Proszę podać wiek",
-  "Please select a date": "Proszę wybrać datę",
+  "field.required": "Pole wymagane",
+  "enter.name": "Podaj imię i nazwisko",
+  "enter.age": "Podaj wiek",
+  "enter.resume": "Podaj życiorys (opcjonalne, maks. 250 znaków)",
   "Max. 250 characters": "Maks. 250 znaków",
+  "no.selected.alert": "Przed wprowadzeniem zmian kliknij 'Edytuj' obok wybranej pozycji!",
 
   "Name": "Imię i nazwisko",
   "Age": "Wiek",

@@ -4,13 +4,14 @@ import {
   removePerson,
   editPerson,
   removeMultiple,
+  setSelectedRecordId,
 } from "./slices/peopleSlice";
 import {
   mainFormReducer,
-  changeName,
-  changeAge,
-  changeDate,
-  changeResume,
+  changeNameField,
+  changeAgeField,
+  changeDateField,
+  changeResumeField,
 } from "./slices/mainFormSlice";
 
 const store = configureStore({
@@ -25,8 +26,9 @@ export {
   removePerson,
   editPerson,
   removeMultiple,
-  changeName,
-  changeAge,
-  changeDate,
-  changeResume,
+  changeNameField,
+  changeAgeField,
+  changeDateField,
+  changeResumeField,
+  setSelectedRecordId,
 };

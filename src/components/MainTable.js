@@ -7,7 +7,7 @@ import { useState } from "react";
 import { peopleColumns } from "../store/rawData/peopleTableConfig";
 import { removePerson, removeMultiple } from "../store";
 
-function MainTable({ handleEdit }) {
+function MainTable({ handleEditClick }) {
   const dispatch = useDispatch();
   const { t } = useTranslation();
 
@@ -29,6 +29,7 @@ function MainTable({ handleEdit }) {
 
   const handleMultiDelete = () => {
     dispatch(removeMultiple(selectedRowKeys));
+    console.log("Deleted records of IDs: " + selectedRowKeys);
   };
 
   // Map over each column. For "birthDate", display localised date; for actions, display Buttons
@@ -44,7 +45,7 @@ function MainTable({ handleEdit }) {
             return (
               <div>
                 <Button
-                  onClick={() => handleEdit(person)}
+                  onClick={() => handleEditClick(person)}
                   type="primary"
                   style={{ width: "80px", marginBottom: "5px" }}
                 >

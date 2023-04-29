@@ -21,6 +21,7 @@ export const peopleColumns = [
     key: "resume",
     title: "Resume",
     dataIndex: "resume",
+    ellipsis: true,
   },
   {
     key: "actions",

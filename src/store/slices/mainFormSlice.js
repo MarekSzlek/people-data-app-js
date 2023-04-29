@@ -2,23 +2,27 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const mainFormSlice = createSlice({
   name: "mainForm",
-  initialState: { name: "", age: 0, date: "", resume: "" },
+  initialState: { name: "", age: null, date: null, resume: "" },
   reducers: {
-    changeName(state, action) {
+    changeNameField(state, action) {
       state.name = action.payload;
     },
-    changeAge(state, action) {
+    changeAgeField(state, action) {
       state.age = action.payload;
     },
-    changeDate(state, action) {
+    changeDateField(state, action) {
       state.date = action.payload;
     },
-    changeResume(state, action) {
+    changeResumeField(state, action) {
       state.resume = action.payload;
     },
   },
 });
 
-export const { changeName, changeAge, changeDate, changeResume } =
-  mainFormSlice.actions;
+export const {
+  changeNameField,
+  changeAgeField,
+  changeDateField,
+  changeResumeField,
+} = mainFormSlice.actions;
 export const mainFormReducer = mainFormSlice.reducer;

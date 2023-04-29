@@ -18,12 +18,14 @@
   "main.table.birthdate": "Birth date",
   "main.table.resume": "Resume",
 
-  "main.form.title": "Input data:",
-  
-  "Please enter your name": "Please enter your name",
-  "Please enter your age": "Please enter your age",
-  "Please select a date": "Please select a date",
+  "main.form.title": "Edit data:",
+
+  "field.required": "Field required",
+  "enter.name": "Please enter your name",
+  "enter.age": "Please enter your age",
+  "enter.resume": "Enter your resume (optional, max. 250 characters)",
   "Max. 250 characters": "Max. 250 characters",
+  "no.selected.alert": "Click 'edit' next to a record of a person before submitting any changes!",
 
   "Name": "Name",
   "Age": "Age",
